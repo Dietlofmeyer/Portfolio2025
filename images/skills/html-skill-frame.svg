@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="html-skill-frame">
+<g id="html-top-left">
+<rect id="html-tl-vertical" x="11" width="3" height="50" fill="#FF6200"/>
+<rect id="html-tl-horizontal" y="14" width="3" height="50" transform="rotate(-90 0 14)" fill="#FF6200"/>
+</g>
+<g id="html-bottom-left">
+<rect id="html-bl-vertical" x="11" y="78" width="3" height="50" fill="#FF6200"/>
+<rect id="html-bl-horizontal" y="117" width="3" height="50" transform="rotate(-90 0 117)" fill="#FF6200"/>
+</g>
+<g id="html-bottom-right">
+<rect id="html-br-vertical" x="114" y="78" width="3" height="50" fill="#FF6200"/>
+<rect id="html-br-horizontal" x="78" y="117" width="3" height="50" transform="rotate(-90 78 117)" fill="#FF6200"/>
+</g>
+<g id="html-top-right">
+<rect id="html-tr-vertical" x="114" width="3" height="50" fill="#FF6200"/>
+<rect id="html-tr-horizontal" x="78" y="14" width="3" height="50" transform="rotate(-90 78 14)" fill="#FF6200"/>
+</g>
+</g>
+</svg>

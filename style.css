@@ -1,0 +1,513 @@
+:root {
+  --bg-trans: 1;
+  --tempCol: #34c759;
+  --primary-color: hsla(210, 100%, 50%, var(--bg-trans));
+  --background-color: #1c1c1c;
+  --primary-color-lite: hsl(270, 100%, 75%);
+  --primary-text: white;
+  --secondary-text: white;
+  --secondary: #1e90ff;
+  --neu-shadow-top: #606060;
+  --neu-shadow-bottom: #282828;
+  --border-pseudo: linear-gradient(
+    0deg,
+    rgb(31, 143, 255) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgb(31, 143, 255) 100%
+  );
+  --html: #e34c26;
+  --css: #1034a6;
+  --js: #f0db4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text);
+  line-height: 1.6;
+  background: url("images/bg.svg");
+  background-size: cover;
+  width: 80%;
+  margin-inline: auto;
+}
+
+a {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+.container {
+  width: 92%;
+  margin: auto;
+  height: 100%;
+}
+
+nav {
+  position: relative;
+  height: 64px;
+  background-color: var(--background-color);
+  border-top: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+nav::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  content: " ";
+  background: var(--border-pseudo);
+  font-weight: bold;
+}
+
+nav::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  content: " ";
+  background: var(--border-pseudo);
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+nav ul li {
+  border: 3px solid var(--primary-color);
+  padding: 5px 10px;
+  background-color: var(--background-color);
+  z-index: 10;
+}
+
+.hero {
+  background-color: var(--background-color);
+  border: 3px solid #34c759;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+  text-align: center;
+}
+
+.hero img {
+  width: 250px;
+  height: 250px;
+  border: 3px solid var(--tempCol);
+}
+
+.hero .img-container {
+  position: relative;
+}
+
+.hero .img-container::before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  content: "";
+  background-color: var(--tempCol);
+  width: 3px;
+  height: 25px;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+}
+
+.skill-list #html {
+  border: none;
+  background: url(images/skills/html-skill-frame.svg);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-list #html img {
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.skill-list #css {
+  border: none;
+  background: url(images/skills/css-skill-frame.svg);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-list #css img {
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.skill-list #js {
+  border: none;
+  background: url(images/skills/js-skill-frame.svg);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-list #js img {
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.hero a {
+  border: 3px solid var(--primary-color);
+  padding: 8px 10px;
+  background-color: var(--background-color);
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-desc a {
+  width: 100%;
+}
+
+.skills {
+  margin-top: 25px;
+
+  border: 3px solid var(--primary-color);
+  padding: 25px;
+  text-align: center;
+}
+
+.div {
+  height: 3px;
+  border: 1px solid hsl(123, 100%, 50%);
+  background-color: hsl(123, 100%, 50%);
+  width: 50%;
+}
+
+.skill-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill-card {
+  border: 3px solid white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--background-color);
+}
+
+/* ////////////////////
+    MEDIA QUERIES
+    /////////////////// */
+
+/* TABLET STYLES */
+
+@media only screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+  nav {
+    position: relative;
+    height: 64px;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .hero {
+    background-color: var(--background-color);
+    border: 3px solid #34c759;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .skill-list #html {
+    border: none;
+    background: url(images/skills/html-skill-frame.svg);
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #html img {
+    border: none;
+    height: 40px;
+    width: 40px;
+  }
+
+  .skill-list #css {
+    border: none;
+    background: url(images/skills/css-skill-frame.svg);
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #css img {
+    border: none;
+    height: 40px;
+    width: 40px;
+  }
+
+  .skill-list #js {
+    border: none;
+    background: url(images/skills/js-skill-frame.svg);
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #js img {
+    border: none;
+    height: 40px;
+    width: 40px;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+  }
+
+  .skill-card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+  }
+}
+
+/* ANYTHING ELSE */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+
+  nav {
+    position: relative;
+    height: 64px;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+    padding-inline: 15px;
+  }
+
+  nav::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    content: " ";
+    background: var(--border-pseudo);
+    font-weight: bold;
+  }
+
+  nav::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    content: " ";
+    background: var(--border-pseudo);
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-top: 64px;
+  }
+
+  .hero {
+    background-color: var(--background-color);
+    border: 3px solid #34c759;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
+    text-align: center;
+    height: 600px;
+  }
+
+  .hero img {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 3px solid var(--tempCol);
+  }
+
+  .hero .img-container::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    content: "";
+    background-color: var(--tempCol);
+    width: 3px;
+    height: 45px;
+  }
+  .hero .img-container::after {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    content: "";
+    background-color: var(--tempCol);
+    width: 3px;
+    height: 53px;
+  }
+
+  .hero-desc {
+    gap: 25px;
+  }
+
+  .hero-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-desc h1 {
+    font-size: 2rem;
+  }
+
+  .hero a {
+    width: 250px;
+  }
+
+  .skill-list #html {
+    border: none;
+    background: url(images/skills/html-skill-frame.svg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #html img {
+    border: none;
+    height: 60px;
+    width: 60px;
+  }
+
+  .skill-list #css {
+    border: none;
+    background: url(images/skills/css-skill-frame.svg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #css img {
+    border: none;
+    height: 60px;
+    width: 60px;
+  }
+
+  .skill-list #js {
+    border: none;
+    background: url(images/skills/js-skill-frame.svg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-list #js img {
+    border: none;
+    height: 60px;
+    width: 60px;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+  }
+
+  .skill-card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+  }
+}
