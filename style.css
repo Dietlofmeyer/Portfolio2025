@@ -26,6 +26,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  /* border: 1px solid red; */
+}
+
+section {
+  margin-top: 35px;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--background-color);
 }
 
 body {
@@ -97,7 +105,6 @@ nav ul li {
 }
 
 .hero {
-  background-color: var(--background-color);
   border: 3px solid #34c759;
   margin-top: 50px;
   display: flex;
@@ -206,11 +213,31 @@ nav ul li {
 }
 
 .skills {
-  margin-top: 25px;
-
   border: 3px solid var(--primary-color);
-  padding: 25px;
-  text-align: center;
+  position: relative;
+}
+
+.skills h2 {
+  border: 2px solid var(--secondary);
+  width: fit-content;
+  position: absolute;
+  top: -22px;
+  background-color: var(--background-color);
+  padding: 5px 10px;
+}
+
+.projects {
+  border: 3px solid var(--primary-color);
+  position: relative;
+}
+
+.projects h2 {
+  border: 2px solid var(--html);
+  width: fit-content;
+  position: absolute;
+  top: -22px;
+  background-color: var(--background-color);
+  padding: 5px 10px;
 }
 
 .div {
@@ -220,30 +247,142 @@ nav ul li {
   width: 50%;
 }
 
-.skill-top {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-}
-
 .skills-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .skill-card {
-  border: 3px solid white;
+  /* width: 350px; */
+  padding: 10px;
+  border: 2px solid var(--tempCol);
+  border-radius: 20px 0px;
+}
+
+.skill-icon {
+  text-align: left;
+  padding: 10px;
+  border: 2px solid var(--css);
+  width: fit-content;
+  border-radius: 10px 0px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--tempCol);
+  text-decoration-thickness: 2px;
+}
+
+.skill-description {
+  text-align: justify;
+}
+
+.projects {
+  border: 3px solid var(--html);
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.prj {
+  border: 2px solid var(--secondary);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prj-top {
+  position: relative;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid var(--tempCol);
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.prj-top::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: -2px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-color);
+  border-top: 2px solid var(--tempCol);
+  border-right: 2px solid var(--tempCol);
+}
+
+.prj-top::before {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: -2px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-color);
+}
+
+.prj-bottom {
+  position: relative;
+  /* height: 150px; */
+  border: 2px solid var(--tempCol);
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+}
+
+.prj-bottom h4 {
+  text-decoration: underline;
+  text-decoration-color: var(--tempCol);
+  text-decoration-thickness: 2px;
+}
+
+.prj-bottom::after {
+  position: absolute;
+  content: "";
+  top: -55px;
+  left: -2px;
+  height: 53px;
+  width: 40px;
+  border-top: 2px solid var(--tempCol);
+  border-right: 2px solid var(--tempCol);
+  border-left: 2px solid var(--tempCol);
   background-color: var(--background-color);
+}
+.prj-bottom::before {
+  position: absolute;
+  content: "";
+  top: -25px;
+  left: 0px;
+  height: 53px;
+  width: 40px;
+
+  background-color: var(--background-color);
+}
+
+.prj-img {
+  background: url(./images/hero-img.png);
+  background-size: cover;
+  width: 180px;
+  height: 125px;
 }
 
 /* ////////////////////
@@ -331,16 +470,35 @@ nav ul li {
   }
 
   .skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     flex-wrap: wrap;
   }
 
   .skill-card {
+    width: 250px;
+  }
+
+  .prj {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
     width: 250px;
+  }
+
+  .prj-img {
+    background: url(./images/hero-img.png);
+    background-size: cover;
+    width: 155px;
+    height: 125px;
+  }
+  .project-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
   }
 }
 
@@ -499,15 +657,9 @@ nav ul li {
   }
 
   .skills-list {
-    flex-wrap: wrap;
-  }
-
-  .skill-card {
-    padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 250px;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
   }
 }
