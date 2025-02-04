@@ -386,6 +386,7 @@ nav ul li {
 }
 
 .prj-link {
+  font-weight: bold;
   text-decoration: underline;
   color: var(--secondary);
 }
