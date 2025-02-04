@@ -385,6 +385,15 @@ nav ul li {
   height: 125px;
 }
 
+.prj-link {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
+.prj-link:visited {
+  color: var(--css);
+}
+
 /* ////////////////////
     MEDIA QUERIES
     /////////////////// */
